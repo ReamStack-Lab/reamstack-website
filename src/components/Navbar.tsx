@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Menu, X, Github } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [stars, setStars] = useState('1.2k');
-
-  useEffect(() => {
-    const simulatedStarCount = '1.2k';
-    setStars(simulatedStarCount);
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -45,7 +38,6 @@ const Navbar = () => {
                 className="flex items-center space-x-2 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 <Github className="w-4 h-4" />
-                <span>{stars} stars</span>
               </a>
             </div>
           </div>
@@ -75,7 +67,6 @@ const Navbar = () => {
               className="flex items-center space-x-2 text-gray-300 hover:text-white px-3 py-2 rounded-md text-base font-medium"
             >
               <Github className="w-4 h-4" />
-              <span>{stars} stars</span>
             </a>
           </div>
         </div>
