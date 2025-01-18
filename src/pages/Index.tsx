@@ -7,7 +7,7 @@ import Screenshots from '../components/Screenshots';
 import TechStack from '../components/TechStack';
 import Sponsors from '../components/Sponsors';
 import Contributors from '../components/Contributors';
-import Community from '../components/Community';
+//import Community from '../components/Community';  // Commented out for future use
 import Installation from '../components/Installation';
 import OperationalStatus from '../components/OperationalStatus';
 import Donation from '../components/Donation';
@@ -25,7 +25,7 @@ const Index = () => {
       <TechStack />
       <Sponsors />
       <Contributors />
-      <Community />
+{/*  <Community /> */}
       <Installation />
       <OperationalStatus />
       <Donation />
