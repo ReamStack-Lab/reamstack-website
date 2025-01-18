@@ -17,7 +17,7 @@ const Donation = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="https://github.com/sponsors/reamstack"
+                  href="https://github.com/sponsors/reamstack-lab"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 rounded-lg bg-emerald-500 text-white hover:bg-emerald-600 transition-colors duration-200"
