@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, Rocket, Copy, ExternalLink } from 'lucide-react';
 import { toast } from 'sonner';
+import DashboardPreview from './DashboardPreview';
 
 const Hero = () => {
   const handleCopy = () => {
@@ -10,79 +11,71 @@ const Hero = () => {
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617]">
-      {/* Gradient and heartbeat animation background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/30 via-teal-800/20 to-[#020617] opacity-80"></div>
         <div className="absolute inset-0">
           <div className="stars absolute inset-0 animate-twinkle"></div>
           <div className="shooting-stars absolute inset-0"></div>
         </div>
-        {/* Heartbeat line animation */}
         <div className="absolute left-0 right-0 top-1/2 h-0.5 transform -translate-y-1/2">
           <div className="heartbeat-line"></div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-transparent to-[#020617]/50"></div>
       </div>
       
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
-        {/* Announcement Banner */}
-        <a 
-          href="https://reamstack.com"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 hover:bg-white/20 transition-colors mb-8"
-        >
-          <Rocket className="w-4 h-4" />
-          <span>Introducing ReamStack Cloud-Hosted</span>
-          <ArrowRight className="w-4 h-4" />
-        </a>
-
-        {/* Main Heading */}
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
-          Deploy in <span className="text-emerald-400">Minutes</span>, Add Services
-          <br />
-          Effortlessly with <span className="relative">
-            <span className="text-emerald-400">One Click</span>
-            <span className="absolute bottom-2 left-0 w-full h-1 bg-emerald-500/50"></span>
-          </span>
-        </h1>
-
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-          ReamStack is an <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">open-source</span> monitoring platform offering real-time insights into server and service health, incident management, and operational transparency.
-        </p>
-
-          {/* Demo Section with Pulsating Circle */}
-          <div className="flex flex-col items-center gap-4 mb-12 relative">
-          <p className="text-xl text-gray-300">Want to see it in action?</p>
-          <div className="relative">
-            {/* Pulsating circles */}
-            <div className="absolute -inset-4">
-              <div className="absolute inset-0 rounded-full bg-emerald-500/20 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
-              <div className="absolute inset-0 rounded-full bg-emerald-500/40 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite_0.5s]"></div>
-            </div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-center lg:text-left">
             <a 
-              href="https://reamstack.com/demo" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="relative inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
+              href="https://reamstack.com"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-white/90 hover:bg-white/20 transition-colors mb-8"
             >
-              Try Live Demo
-              <ExternalLink className="w-4 h-4" />
+              <Rocket className="w-4 h-4" />
+              <span>Introducing ReamStack Cloud-Hosted</span>
+              <ArrowRight className="w-4 h-4" />
             </a>
-          </div>
-        </div>
 
-        {/* Command Box */}
-        <div className="flex justify-center mb-8">
-          <div className="relative group">
-            <div className="flex items-center gap-2 bg-emerald-950/50 backdrop-blur-sm px-6 py-3 rounded-lg cursor-pointer border border-emerald-800/30" onClick={handleCopy}>
-              <code className="text-white">curl -sSL https://reamstack.com/install.sh | sh</code>
-              <Copy className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              Deploy in <span className="text-emerald-400">Minutes</span>, Add Services
+              Effortlessly with <span className="relative">
+                <span className="text-emerald-400">One Click</span>
+                <span className="absolute bottom-2 left-0 w-full h-1 bg-emerald-500/50"></span>
+              </span>
+            </h1>
+
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl">
+              ReamStack is an <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">open-source</span> monitoring platform offering real-time insights into server and service health, incident management, and operational transparency.
+            </p>
+
+            <div className="flex flex-col items-center lg:items-start gap-4 mb-12 relative">
+              <p className="text-xl text-gray-300">Want to see it in action?</p>
+              <div className="relative">
+                <div className="absolute -inset-4">
+                  <div className="absolute inset-0 rounded-full bg-emerald-500/20 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+                  <div className="absolute inset-0 rounded-full bg-emerald-500/40 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite_0.5s]"></div>
+                </div>
+                <a 
+                  href="https://demo.reamstack.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="relative inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
+                >
+                  Try Live Demo
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              </div>
             </div>
-          </div>
-        </div>
 
-        {/* Action Buttons */}
+            <div className="flex justify-center lg:justify-start mb-8">
+              <div className="relative group">
+                <div className="flex items-center gap-2 bg-emerald-950/50 backdrop-blur-sm px-6 py-3 rounded-lg cursor-pointer border border-emerald-800/30" onClick={handleCopy}>
+                  <code className="text-white">curl -sSL https://reamstack.com/install.sh | sh</code>
+                  <Copy className="w-4 h-4 text-gray-400 group-hover:text-white transition-colors" />
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
             href="https://github.com/ReamStack-Lab/reamstack" 
@@ -121,6 +114,13 @@ const Hero = () => {
             </svg>
             Documentation
           </a>
+        </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:block">
+            <DashboardPreview />
+          </div>
         </div>
       </div>
     </div>
