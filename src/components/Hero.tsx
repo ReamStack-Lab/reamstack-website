@@ -51,18 +51,25 @@ const Hero = () => {
           ReamStack is an <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text">open-source</span> monitoring platform offering real-time insights into server and service health, incident management, and operational transparency.
         </p>
 
-        {/* Demo Section */}
-        <div className="flex flex-col items-center gap-4 mb-12">
+          {/* Demo Section with Pulsating Circle */}
+          <div className="flex flex-col items-center gap-4 mb-12 relative">
           <p className="text-xl text-gray-300">Want to see it in action?</p>
-          <a 
-            href="https://reamstack.com/demo" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
-          >
-            Try Live Demo
-            <ExternalLink className="w-4 h-4" />
-          </a>
+          <div className="relative">
+            {/* Pulsating circles */}
+            <div className="absolute -inset-4">
+              <div className="absolute inset-0 rounded-full bg-emerald-500/20 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+              <div className="absolute inset-0 rounded-full bg-emerald-500/40 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite_0.5s]"></div>
+            </div>
+            <a 
+              href="https://reamstack.com/demo" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="relative inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-600 hover:via-teal-600 hover:to-cyan-600 text-white transition-all duration-300 shadow-lg hover:shadow-emerald-500/25"
+            >
+              Try Live Demo
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
         </div>
 
         {/* Command Box */}
