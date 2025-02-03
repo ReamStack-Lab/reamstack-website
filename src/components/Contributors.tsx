@@ -10,31 +10,31 @@ const contributors = [
     github: 'https://github.com/tolalengoss' 
   },
   { 
-    name: 'You are the Next to Be 1', 
+    name: 'Coming', 
     role: 'Maintainer', 
     icon: UserRound, 
     github: '#' 
   },
   { 
-    name: 'You are the Next to Be 2', 
+    name: 'Coming', 
     role: 'Maintainer', 
     icon: Users, 
     github: '#' 
   },
   { 
-    name: 'You are the Next to Be 3', 
+    name: 'Coming', 
     role: 'Maintainer', 
     icon: PersonStanding, 
     github: '#' 
   },
   { 
-    name: 'You are the Next to Be 4', 
+    name: 'Coming', 
     role: 'Contributor', 
     icon: UsersRound, 
     github: '#' 
   },
   { 
-    name: 'You are the Next to Be 5', 
+    name: 'Coming', 
     role: 'Contributor', 
     icon: UserRound, 
     github: '#' 
